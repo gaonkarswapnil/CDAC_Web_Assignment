@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 15px;
+            background-color: lightblue;
+        }
+
+        .container .text{
+            padding: 15px;
+            font-size: 18px
+        }
+
+        .container input{
+            margin-left: 12px;
+            width: 200px;
+        }
+
+        .container .btn{
+            padding: 14px;
+        }
+
+        .container .btn button{
+            width: 50px;
+            box-shadow: 2px 3px 3px black;
+            background-color: #4dd14d;
+            color: white;
+            text-transform: capitalize;
+            font-size: 15px;
+        }
+
+        .container .rlt{
+            padding: 14px;
+            font-size: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <form action="">
+            <div class="text">
+                <label for="fname">Number 1: </label>
+                <input type="number" name="num1" id="num1" placeholder="Enter first number here" required>
+                
+            </div>
+            <div class="text">
+                <label for="fname">Number 2: </label>
+                <input type="number" name="num2" id="num2" placeholder="Enter first number here" required>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="getAdd()"><b>Add</b></button>&emsp;
+                <button type="button" onclick="getSub()"><b>Sub</b></button>&emsp;
+                <button type="button" onclick="getMul()"><b>Mul</b></button>&emsp;
+                <button type="button" onclick="getDiv()"><b>Div</b></button>&emsp;
+            </div>
+            
+        </form>
+        <div class="rlt">
+            <label for="result">Result</label>&emsp;
+            <strong id="result"></strong>
+        </div>
+    </div>
+   
+    
+    <script>
+        // var myName = prompt("Enter your name:", "Swap");
+        // console.log(myName)
+        function getAdd(){
+            var nm1 = document.getElementById('num1').value;
+            var nm2 = document.getElementById('num2').value;
+            var sum = parseInt(nm1)+parseInt(nm2);
+            document.getElementById("result").innerHTML = sum;
+        }
+
+        function getSub(){
+            var nm1 = document.getElementById('num1').value;
+            var nm2 = document.getElementById('num2').value;
+            var diff = parseInt(nm1)-parseInt(nm2);
+            document.getElementById("result").innerHTML = diff;
+        }
+
+        function getMul(){
+            var nm1 = document.getElementById('num1').value;
+            var nm2 = document.getElementById('num2').value;
+            var mul = parseInt(nm1)*parseInt(nm2);
+            document.getElementById("result").innerHTML = mul;
+        }
+
+        function getDiv(){
+            var nm1 = document.getElementById('num1').value;
+            var nm2 = document.getElementById('num2').value;
+            var div = parseInt(nm1)/parseInt(nm2);
+            document.getElementById("result").innerHTML = div;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./validationForm.js"></script>
+</head>
+<body>
+    <form action="" name="myform" onsubmit="return checkData()">
+    <div>
+        <label> Enter your Fullname</label>
+        <input type="text" name="fname" id="fname">
+    </div><br>
+    <div>
+        <label>Enter your password</label>
+        <input type="password" name="password" id="password">
+    </div><br>
+    <div>
+        <label>Enter your email</label>
+        <input type="text" name="email" id="email"> 
+    </div>
+    <div>
+        <label>Enter your contact.No</label>
+        <input type="text" name="contact" id="contact">  
+    </div>
+    <div><label>Select Your Qualification:</label>
+    <input type="checkbox" name="edu" value="ssc">SSC
+    <input type="checkbox" name="edu" value="hsc">HSC
+    <input type="checkbox" name="edu" value="ug">UG
+    <input type="checkbox" name="edu" value="pg">PG
+</div>
+    <button type="submit">submit</button>    
+    </form>
+</body>
+</html>

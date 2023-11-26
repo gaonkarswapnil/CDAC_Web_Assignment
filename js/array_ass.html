@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        .container{
+            display: flex;
+            padding: 12px;
+            text-align: center;
+            border: 2px solid black;
+            background-color: lightsteelblue;
+        }
+
+        .container .set{
+            /* width: 33.33%; */
+            padding: 15px;
+        }
+
+        .container .set label{
+            font-size: 20px;
+        }
+        .container .set input{
+            border: 2px solid black;
+            width: 250px;
+            padding: 10px;
+            margin: 12px;
+        }
+
+        .container .set textarea{
+            border: 2px solid black;
+            width: 250px;
+            padding: 10px;
+            margin: 12px;
+            resize: none;
+        }
+
+        .container .set button{
+            padding: 12px;
+            /* width: 100px; */
+            border: 2px solid black;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="set" style="width: 50%;">
+            <label for="name">Enter Students Name</label>
+            <input type="text" name="name" id="name" >
+            <textarea name="list" id="list" cols="30" rows="10"></textarea>
+        </div>
+        <div class="set" style="width: 25%; margin-top: 100px;">
+            <button type="submit" onclick="add()" style="width: 100px;">Add</button>
+        </div>
+        <div class="set" style="width: 25%; margin-top: 100px;">
+            <button type="button" onclick="displayData()" style="width: 180px;">Display Data</button>
+        </div>
+    </div>
+   
+    <script>
+        array=[];
+        function add(){
+            var str=""
+            var name = document.getElementById("name").value;
+            array.push(name);
+            console.log(array);
+            for(let std of array){
+                str = str + std+ ", "
+                document.getElementById("list").value = str;
+            }
+        }
+        function displayData(){
+            for(let std of array){
+                document.write(std+"<br>")
+            }
+        }
+    </script>
+</body>
+</html>

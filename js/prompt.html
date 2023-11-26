@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt box</title>
+    <style>
+        .container{
+            padding: 12px;
+            word-spacing: 10px;
+            letter-spacing: 3px;
+            font-family: cursive;
+            text-transform: capitalize
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <strong id="fname" style="color: blue;">HII</strong> 
+        <strong id="lname" style="color: red;">Data</strong>
+    </div>
+    
+
+    <script>
+        var fname = prompt("Enter First Name");
+        var lname = prompt("Enter Last Name");
+
+        document.getElementById("fname").innerHTML = fname;
+        document.getElementById("lname").innerHTML = lname;
+        // console.log(fname+" "+lname)
+    </script>
+</body>
+</html>

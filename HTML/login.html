@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            font-family: monospace;
+            background-color: #064706;
+        }
+        .container{
+            border: 2px solid black;
+            text-align: center;
+            width: 300px;
+            margin: auto;
+            box-shadow: 2px 2px 8px black;
+            background-color: white;
+            padding: 30px 30px 80px 30px;
+            margin-top: 150px;
+        }
+        .container .heading{
+            background-color: white;
+            text-transform: uppercase;
+        }
+
+        .container .data{
+            background-color: white;
+        }
+
+        .container input{
+            background-color: #f1f1f1;
+            width: 260px;
+            border: 2px;
+            padding: 12px;
+        }
+
+        .container button{
+            padding: 12px;
+            text-align: center;
+            width: 280px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .container .account{
+            background-color: white;
+            display: inline;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Login</h2>
+        <p class="data">Please enter your credentials to login.</p>
+
+        <input type="text" name="username" id="username" placeholder="username"><br><br>
+        <input type="password" name="pass" id="pass" placeholder="password"><br><br>
+        <button type="button">Login</button>
+        <br><br>
+        Not registered? <div class="account">Create an account</div> 
+    </div>
+</body>
+</html>

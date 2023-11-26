@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: cornflowerblue;
+        }
+
+        .container .paragraph{
+            padding: 12px;
+        }
+
+        .container .replace{
+            padding: 15px;
+        }
+
+        .container .replace .inp{
+            display: flex;
+            /* padding: 15px; */
+        }
+
+        .container .replace .inp .txt{
+            padding: 15px;
+            width: 210px;
+        }
+        
+        .container .replace .btn{
+            padding: 15px;
+        }
+
+        .container .replace .btn button{
+            border: 2px solid black;
+            width: 120px;
+            height: 45px;
+            border-radius: 15%;
+            margin-left: 25px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="paragraph">
+            <textarea name="para" id="para" cols="30" rows="10" style="resize: none;" required></textarea>
+        </div>
+        <div class="replace">
+            <div class="inp">
+                <div class="txt">
+                    <label for="old_text">Old Text</label>
+                    <input type="text" name="old_text" id="old_text" required>
+                </div>
+                <div class="txt">
+                    <label for="old_text">New Text</label>
+                    <input type="text" name="new_text" id="new_text" required>
+                </div>
+            </div>
+            
+            <div class="btn">
+                <button type="button" onclick="replace_string()">Replace string</button>
+                <button type="button" onclick="replace_all()">Replace All</button>
+            </div>
+        </div> 
+    </div>
+    
+    
+    <script>
+        function replace_string(){
+            var para = document.getElementById("para").value;
+            console.log(para);
+            var old_val = document.getElementById("old_text").value;
+            var new_val = document.getElementById("new_text").value;
+            var new_para = para.replace(old_val, new_val);
+            console.log(new_para)
+            document.getElementById("para").value = new_para;
+        }
+
+        function replace_all(){
+            var para = document.getElementById("para").value;
+            console.log(para);
+            var old_val = document.getElementById("old_text").value;
+            var new_val = document.getElementById("new_text").value;
+            var new_para = para.replaceAll(old_val, new_val);
+            console.log(new_para)
+            document.getElementById("para").value = new_para;
+        }
+    </script>
+</body>
+</html>

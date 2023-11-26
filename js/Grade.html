@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            width:600px;
+            height: 300px;
+            border:2px solid black;
+            display:grid;
+            grid-template-columns: 1f 1f;
+            background-color: gray;
+        }
+        #button1 {
+  background-color: aqua;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.child3{
+
+    grid-column: 2;
+    margin-top: 75px;
+
+}
+.child1{
+    margin-top: 86px;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+
+        <div class="child1">
+          Enter Your Marks <br>
+         <input id="input1" type="text">
+        </div>
+        <div class="child3">
+            <button id="button1" onclick="ResultCal()" >Check Result<br> with Grade</button>
+        </div>
+        <div>
+            <h3 id="result">Your Result is:</h3>
+        </div>
+    </div>
+
+    <script>
+
+                            function ResultCal()
+                            {
+                                var input =document.getElementById("input1").value;
+
+                                input =parseInt(input);
+                                if(input>=80)
+                                {
+                                    document.getElementById("result").innerHTML="Your Result is: Destinction";
+                                }
+                                else if(input>=60)
+                                {
+                                    document.getElementById("result").innerHTML="Your Result is: First Class";
+                                }
+                                else if(input>=50)
+                                {
+                                    document.getElementById("result").innerHTML="Your Result is:Second Class";
+
+                                }
+                                else if(input>=35)
+                                {
+                                    document.getElementById("result").innerHTML="Your Result is:Third class";
+                                }
+                                else{
+                                    document.getElementById("result").innerHTML="Your Result is:Failed";
+                                }
+                            }
+
+    </script>
+</body>
+</html>

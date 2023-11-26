@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            margin-top: 5%;
+            margin-left: 33%;
+        }
+        #text{
+            font-style: oblique;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .but{
+            background-color: black;
+            color: white;
+            width: 100px;
+        }
+        #text{
+            background-color: black;
+            color: rgb(255, 85, 0);
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <img width="500px" height="500px" src="../html/Asset/Image/chatrapati.jpg" id="photo"><br>
+        <div id="text">Chatrapti Shivaji Maharaj</div><br>
+        <button class="but" type="button" onclick="setData()">Toggle</button>
+    </div>
+    <!-- <img src="../html/Asset/Image/maa saheb.jpg" alt=""> -->
+    <script>
+        function setData() {
+            let txt = document.getElementById("text").innerHTML;
+            if (txt == "Chatrapti Shivaji Maharaj") {
+                document.getElementById("photo").src = "../html/Asset/Image/maa saheb.jpg";
+                document.getElementById("text").innerHTML = "Jijau Aai Saheb";
+            } else {
+                document.getElementById("photo").src = "../html/Asset/Image/chatrapati.jpg";
+                document.getElementById("text").innerHTML = "Chatrapti Shivaji Maharaj";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
